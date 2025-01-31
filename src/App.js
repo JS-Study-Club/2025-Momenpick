@@ -6,6 +6,9 @@ import SelectSizeDesigner from "./selectsize_designer/SelectSizeDesigner";
 import SelectSizeDeveloper from "./selectsize_developer/SelectSizeDeveloper";
 import SelectFrameTeacher from "./selectframe_teacher/SelectFrameTeacher";
 import SelectFrameSummer from "./selectframe_summer/SelectFrameSummer";
+import SelectSizeSummer1 from "./selectsize_summer1/SelectSizeSummer1";
+import SelectSizeSummer2 from "./selectsize_summer2/SelectSizeSummer2";
+import SelectSizeSummer3 from "./selectsize_summer3/SelectSizeSummer3";
 
 function App() {
 
@@ -20,6 +23,9 @@ function App() {
           <Route path="/Developer" element={<SelectSizeDeveloper /> } />
           <Route path="/Teacher" element={<SelectFrameTeacher /> } />
           <Route path="/Summer" element={<SelectFrameSummer /> } />
+          <Route path="/Summer1" element={<SelectSizeSummer1 /> } />
+          <Route path="/Summer2" element={<SelectSizeSummer2 /> } />
+          <Route path="/Summer3" element={<SelectSizeSummer3 /> } />
 
       </Routes>
     </Router>
