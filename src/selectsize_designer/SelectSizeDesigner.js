@@ -3,7 +3,16 @@ import "./SelectSizeDesigner.css";
 const SelectSizeDesigner = () => {
 
   return (
-    <div className="select-background"></div>
+    <div className="select-background">
+      <div className="Select-header"> 
+        <img
+          src="images/backBtn.png"
+          alt="Back"
+          className="backBtn"
+        />
+        <div id="title">프레임 크기를 선택해주세요.</div>
+      </div>
+    </div>
   );
 };
 

@@ -4,7 +4,7 @@ import Main from "./main/Main";
 import SelectFrame from "./selectframe/SelectFrame";
 import SelectSizeDesigner from "./selectsize_designer/SelectSizeDesigner";
 import SelectSizeDeveloper from "./selectsize_developer/SelectSizeDeveloper";
-import SelectSizeTeacher from "./selectsize_teacher/SelectSizeTeacher";
+import SelectFrameTeacher from "./selectframe_teacher/SelectFrameTeacher";
 import SelectFrameSummer from "./selectframe_summer/SelectFrameSummer";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           <Route path="/selectFrame" element={<SelectFrame /> } />
           <Route path="/Designer" element={<SelectSizeDesigner /> } />
           <Route path="/Developer" element={<SelectSizeDeveloper /> } />
-          <Route path="/Teacher" element={<SelectSizeTeacher /> } />
+          <Route path="/Teacher" element={<SelectFrameTeacher /> } />
           <Route path="/Summer" element={<SelectFrameSummer /> } />
 
       </Routes>

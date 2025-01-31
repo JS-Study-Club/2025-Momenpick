@@ -1,0 +1,23 @@
+.select-header{
+    display: flex;
+    align-items: center;
+}
+
+.backBtn{
+    width: 122px;
+    height: auto;
+    cursor: pointer;
+    margin-right: 480px;
+    margin-left: 110px;
+    position: relative;
+    top: 100px;
+}
+
+#title{
+    font-family: "Paperlogy-7Bold";
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: 100px;
+}
