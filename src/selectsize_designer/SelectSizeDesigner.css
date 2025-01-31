@@ -9,8 +9,10 @@
     cursor: pointer;
     margin-right: 480px;
     margin-left: 110px;
-    position: relative;
     top: 100px;
+    position: relative;
+    z-index: 10; /* 다른 요소에 가려지지 않도록 설정 */
+
 }
 
 #title{
