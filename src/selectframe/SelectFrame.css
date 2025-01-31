@@ -1,4 +1,4 @@
-.selectFrame-background {
+.select-background {
     background-image: url('/public/images/kindChoiceBg.png'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
@@ -6,7 +6,7 @@
     height: 100vh;
 }
 
-.selectFrame-background img {
+.select-background img {
     position: absolute;
 }
 
