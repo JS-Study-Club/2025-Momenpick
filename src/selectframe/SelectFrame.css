@@ -5,3 +5,27 @@
     width: 100%;
     height: 100vh;
 }
+
+.selectFrame-background img {
+    position: absolute;
+}
+
+.designer {
+    left: 30px;
+    top: 30px;
+}
+
+.developer {
+    left: 525px; /* designer의 width만큼 오른쪽으로 배치 */
+    top: 30px;
+}
+
+.teacher {
+    left: 1010px;
+    top: 40px;
+}
+
+.summer {
+    left: 1010px; /* teacher 이미지의 너비만큼 오른쪽으로 배치 */
+    top: 415px;
+}
