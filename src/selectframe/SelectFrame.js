@@ -6,7 +6,7 @@ const SelectFrame = () => {
     const navigate = useNavigate();
 
     return(
-        <div className="select-background">
+        <div className="selectFrame-background">
             <img
                 className="designer"
                 src="/images/designerSelect.png" 

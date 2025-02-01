@@ -5,7 +5,7 @@ import "./SelectFrameSummer.css";
 const SelectFrameSummer = () => {
  const navigate = useNavigate();
   return (
-    <div className="select-background">
+    <div className="selectFrame-background">
       <div className="Select-header">
         <img
             src="images/backBtn.png"

@@ -5,7 +5,7 @@ import "./SelectSizeDeveloper.css";
 const SelectSizeDeveloper = () => {
   const navigate = useNavigate();
   return (
-    <div className="select-background">
+    <div className="selectSize-background">
       <div className="Select-header"> 
         <img
           src="images/backBtn.png"

@@ -1,3 +1,15 @@
+.selectSize-background {
+    background-image: url('/public/images/sizeChoiceBg.png');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.selectSize-background img {
+    position: absolute;
+}
+
 .select-header{
     display: flex;
     align-items: center;
@@ -23,3 +35,22 @@
     position: relative;
     top: 100px;
 }
+
+.designer1{
+    top: 200px;
+    left: 230px;
+}
+.designer2{
+    top: 200px;
+    left: 700px;
+}
+
+.countdown-timer {
+    position: absolute;
+    top: 100px;
+    right: 90px;
+    font-size: 45px;
+    font-family: "Paperlogy-6SemiBold";
+    color: #FFE852;
+  }
+  
