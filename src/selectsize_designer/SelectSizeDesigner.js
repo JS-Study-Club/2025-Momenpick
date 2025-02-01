@@ -22,7 +22,7 @@ const SelectSizeDesigner = () => {
   }, [navigate]);
 
   const handleImageClick = () => {
-    navigate("/NextPage"); // 원하는 페이지로 이동
+    navigate("/"); // 사진촬영 페이지로 이동
   };
 
   return (
@@ -35,7 +35,7 @@ const SelectSizeDesigner = () => {
           onClick={() => navigate("/SelectFrame")}
         />
         <div id="title">프레임 크기를 선택해주세요.</div>
-        <div className="countdown-timer">{countdown}초</div>
+        <div className="countdown-timer">{countdown}</div>
       </div>
       <img
         src="images/ex_designer1.png"
@@ -43,6 +43,7 @@ const SelectSizeDesigner = () => {
         className="designer1"
         width={414}
         height={614}
+        style={{ cursor: "pointer" }}
         onClick={handleImageClick}
       />
       <img
@@ -51,6 +52,7 @@ const SelectSizeDesigner = () => {
         className="designer2"
         width={598}
         height={614}
+        style={{ cursor: "pointer" }}
         onClick={handleImageClick}
       />
     </div>

@@ -4,6 +4,7 @@ import "./SelectFrameTeacher.css";
 
 const SelectFrameTeacher = () => {
  const navigate = useNavigate();
+ 
   return (
     <div className="selectFrame-background">
       <img
