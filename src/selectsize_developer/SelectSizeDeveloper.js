@@ -39,7 +39,7 @@ const SelectSizeDeveloper = () => {
         <div className="countdown-timer">{countdown}</div>
       </div>
       <img
-        //src="images/ex_developer1.png"
+        src="images/ex_developer1.png"
         alt="developer세로예시"
         className="designer1"
         width={414}
@@ -48,7 +48,7 @@ const SelectSizeDeveloper = () => {
         onClick={handleImageClick}
       />
       <img
-        //src="images/ex_developer2.png"
+        src="images/ex_developer2.png"
         alt="developer가로예시"
         className="designer2"
         width={598}
