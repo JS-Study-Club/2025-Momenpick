@@ -10,6 +10,8 @@ import SelectSizeSummer1 from "./selectsize_summer1/SelectSizeSummer1";
 import SelectSizeSummer2 from "./selectsize_summer2/SelectSizeSummer2";
 import SelectSizeSummer3 from "./selectsize_summer3/SelectSizeSummer3";
 import Gallery from "./Gallery/Gallery";
+import Finish from "./Finish/Finish";
+
 
 function App() {
 
@@ -28,6 +30,7 @@ function App() {
           <Route path="/Summer2" element={<SelectSizeSummer2 /> } />
           <Route path="/Summer3" element={<SelectSizeSummer3 /> } />
           <Route path="/Gallery" element={<Gallery /> } />
+          <Route path="/Finish" element={<Finish /> } />
 
       </Routes>
     </Router>
