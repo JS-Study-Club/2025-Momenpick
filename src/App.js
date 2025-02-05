@@ -11,7 +11,7 @@ import SelectSizeSummer2 from "./selectsize_summer2/SelectSizeSummer2";
 import SelectSizeSummer3 from "./selectsize_summer3/SelectSizeSummer3";
 import Gallery from "./Gallery/Gallery";
 import Finish from "./Finish/Finish";
-
+import Email from "./Email/Email";
 
 function App() {
 
@@ -31,6 +31,7 @@ function App() {
           <Route path="/Summer3" element={<SelectSizeSummer3 /> } />
           <Route path="/Gallery" element={<Gallery /> } />
           <Route path="/Finish" element={<Finish /> } />
+          <Route path="/Email" element={<Email /> } />
 
       </Routes>
     </Router>
