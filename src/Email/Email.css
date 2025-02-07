@@ -49,7 +49,7 @@
 }
 
 .error-message {
-    color: red;
+    color: #FFE852;
     font-family: 'Paperlogy-4Regular';
     font-size: 20px; 
     margin-top: 10px;
@@ -73,6 +73,7 @@
     border-radius: 4px;
     margin-right: 8px;
     position: relative;
+    accent-color: #603D38;
 }
 
 .checkBtn {
