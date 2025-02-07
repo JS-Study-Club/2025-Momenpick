@@ -36,11 +36,15 @@
     top: 100px;
 }
 
-.designer1{
+.size1{
+    width: 414px;
+    height: 614px;
     top: 200px;
     left: 230px;
 }
-.designer2{
+.size2{
+    width: 598px;
+    height: 614px;
     top: 200px;
     left: 700px;
 }

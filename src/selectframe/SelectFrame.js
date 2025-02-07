@@ -5,6 +5,10 @@ import "./SelectFrame.css";
 const SelectFrame = () => {
     const navigate = useNavigate();
 
+    const goToResult = (design) => {
+        navigate(`/selectsize/${design}`); // 선택한 직업을 URL에 전달
+      };
+
     return(
         <div className="selectFrame-background">
             <img
@@ -13,7 +17,7 @@ const SelectFrame = () => {
                 alt="Designer"
                 width={507}
                 height={805}
-                onClick={() => navigate("/Designer")}
+                onClick={() => goToResult("designer")}
                 style={{ cursor: "pointer" }}
             />
             <img
@@ -22,7 +26,7 @@ const SelectFrame = () => {
                 alt="Developer"
                 width={507}
                 height={805}
-                onClick={() => navigate("/Developer")}
+                onClick={() => goToResult("developer")}
                 style={{ cursor: "pointer" }}
             />
             <img
