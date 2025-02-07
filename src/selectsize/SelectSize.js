@@ -16,10 +16,7 @@ function SelectSize() {
         summer1: ["/images/ex_summer1-1.png", "/images/ex_summer1-2.png"],
         summer2: ["/images/ex_summer2-1.png", "/images/ex_summer2-2.png"],
         summer3: ["/images/ex_summer3-1.png", "/images/ex_summer3-2.png"],
-
     };
-
-    console.log("불러올 이미지 배열:", images[design]); // 이미지 배열 확인
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -40,6 +37,15 @@ function SelectSize() {
         navigate("/");
     };
 
+    const handleBackClick = () => {
+        // summer1, summer2, summer3일 경우 "/summer"로 이동, 그 외는 "/SelectFrame"으로 이동
+        if (design === "summer1" || design === "summer2" || design === "summer3") {
+            navigate("/Summer");
+        } else {
+            navigate("/SelectFrame");
+        }
+    };
+
     return (
         <div className="selectSize-background">
             <div className="Select-header">
@@ -47,7 +53,7 @@ function SelectSize() {
                     src="/images/backBtn.png"
                     alt="Back"
                     className="backBtn"
-                    onClick={() => navigate("/SelectFrame")}
+                    onClick={handleBackClick}
                 />
                 <div id="title">프레임 크기를 선택해주세요.</div>
                 <div className="countdown-timer">{countdown}</div>
