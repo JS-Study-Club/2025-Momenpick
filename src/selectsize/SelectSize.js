@@ -13,6 +13,10 @@ function SelectSize() {
     const images = {
         designer: ["/images/ex_designer1.png", "/images/ex_designer2.png"],
         developer: ["/images/ex_developer1.png", "/images/ex_developer2.png"],
+        summer1: ["/images/ex_summer1-1.png", "/images/ex_summer1-2.png"],
+        summer2: ["/images/ex_summer2-1.png", "/images/ex_summer2-2.png"],
+        summer3: ["/images/ex_summer3-1.png", "/images/ex_summer3-2.png"],
+
     };
 
     console.log("불러올 이미지 배열:", images[design]); // 이미지 배열 확인
