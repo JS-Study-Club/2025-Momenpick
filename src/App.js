@@ -23,8 +23,8 @@ function App() {
           <Route path="/selectSize/:design" element={<SelectSize />} />
           <Route path="/Teacher" element={<SelectFrameTeacher /> } />
           <Route path="/Summer" element={<SelectFrameSummer /> } />
-          <Route path="/PictureSize1" element={<PictureSize1 /> } />
-          <Route path="/PictureSize2" element={<PictureSize2 /> } />
+          <Route path="/PictureSize1/:frame" element={<PictureSize1 /> } />
+          <Route path="/PictureSize2/:frame" element={<PictureSize2 /> } />
           <Route path="/Email" element={<Email /> } />
           <Route path="/Finish" element={<Finish /> } />
           <Route path="/Gallery" element={<Gallery /> } />

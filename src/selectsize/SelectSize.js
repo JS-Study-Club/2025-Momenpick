@@ -5,11 +5,10 @@ import "./SelectSize.css";
 function SelectSize() {
     const navigate = useNavigate();
     const [countdown, setCountdown] = useState(30);
-    const { design } = useParams(); // URL에서 design 값 가져오기
+    const { design } = useParams();
 
-    console.log("현재 선택된 직업:", design); // 값이 정상적으로 들어오는지 확인
+    console.log("현재 선택된 직업:", design);
 
-    // 직업별 이미지 설정
     const images = {
         designer: ["/images/ex_designer1.png", "/images/ex_designer2.png"],
         developer: ["/images/ex_developer1.png", "/images/ex_developer2.png"],
@@ -33,13 +32,12 @@ function SelectSize() {
         };
     }, [navigate]);
 
-    const handleImageClick = () => {
-        navigate("/");
+    const handleImageClick = (size) => {
+        navigate(`/PictureSize${size}/${design}`);
     };
 
     const handleBackClick = () => {
-        // summer1, summer2, summer3일 경우 "/summer"로 이동, 그 외는 "/SelectFrame"으로 이동
-        if (design === "summer1" || design === "summer2" || design === "summer3") {
+        if (design.startsWith("summer")) {
             navigate("/Summer");
         } else {
             navigate("/SelectFrame");
@@ -64,14 +62,14 @@ function SelectSize() {
                 className="size1"
                 src={images[design] ? images[design][0] : ""}
                 style={{ cursor: "pointer" }}
-                onClick={handleImageClick}
+                onClick={() => handleImageClick(1)}
             />
             <img
                 alt="가로형"
                 className="size2"
                 src={images[design] ? images[design][1] : ""}
                 style={{ cursor: "pointer" }}
-                onClick={handleImageClick}
+                onClick={() => handleImageClick(2)}
             />
         </div>
     );

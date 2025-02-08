@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Webcam from "react-webcam";
 import "./PictureSize1.css";
 
@@ -8,6 +9,15 @@ const PictureSize1 = () => {
     const [countdown, setCountdown] = useState(10);
     const [photoCount, setPhotoCount] = useState(0);
     const [capturedImages, setCapturedImages] = useState([]);
+    const { frame } = useParams(); // URL에서 frame 값 가져오기
+
+    const images = {
+        designer: ["/images/designer1.png"],
+        developer: ["/images/developer1.png"],
+        summer1: ["/images/summer1-1.png"],
+        summer2: ["/images/summer2-1.png"],
+        summer3: ["/images/summer3-1.png"],
+    };
 
     useEffect(() => {
         if (showModal) {
@@ -42,7 +52,7 @@ const PictureSize1 = () => {
                     <div className="modal-content">
                         <img 
                             className="picIcon"
-                            src="./images/pictureIcon.png"
+                            src="/images/pictureIcon.png"
                             alt="사진 아이콘"
                         />
                         <h2 className="text1">잠시 후 촬영이 시작됩니다</h2>
@@ -66,14 +76,14 @@ const PictureSize1 = () => {
                         ref={webcamRef}
                         screenshotFormat="image/jpeg"
                         className="photo"
-                        mirrored={false}
+                        mirrored={true}
                     />
                 </div>
                 
                 <div className="resultZone">
                     <img
-                        src="./images/designer2.png"
-                        alt="디자이너 가로"
+                        src={images[frame] ? images[frame][0] : ""}
+                        alt={`${frame} 가로 프레임`}
                         className="frame"
                     />
                     {capturedImages.map((image, index) => (
@@ -81,7 +91,7 @@ const PictureSize1 = () => {
                             key={index} 
                             src={image} 
                             alt={`Captured ${index + 1}`} 
-                            className={`takenPhoto photo${index + 1}`} // 각 사진에 동적 클래스 추가
+                            className={`takenPhoto photo${index + 1}`}
                         />
                     ))}
                 </div>
