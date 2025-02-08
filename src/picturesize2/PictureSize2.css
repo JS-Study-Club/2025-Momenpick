@@ -1,4 +1,4 @@
-.Picture-background {
+.PictureSize2-Picture-background {
     background-image: url('/public/images/PictureBg.png');
     background-size: cover;
     background-position: center;
@@ -6,22 +6,12 @@
     height: 100vh;
 }
 
-.Picture-background img {
+.PictureSize2-Picture-background img {
     position: absolute;
-}
-/* 배경을 어둡게 하는 오버레이 */
-.dark-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);  /* 어두운 반투명 배경 */
-    z-index: 100;  /* 모달보다 아래 */
 }
 
 /* 모달 스타일 */
-.modal {
+.PictureSize2-modal {
     width: 456px;
     height: 206px;
     position: fixed;
@@ -32,93 +22,97 @@
     padding: 50px;
     border-radius: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.PictureSize2-2);
     z-index: 101;  /* 배경보다 위에 위치 */
 }
 
-.picIcon {
+.PictureSize2-picIcon {
     width: 41px;
     height: 37px;
 }
 
-.text1 {
+.PictureSize2-text1 {
     font-family: 'Paperlogy-7Bold';
     font-size: 43px;
     color: #47322F;
 }
 
-.text2 {
+.PictureSize2-text2 {
     font-family: 'Paperlogy-4Regular';
     font-size: 28px;
     color: #555555;
 }
 
-.text3 {
+.PictureSize2-text3 {
     font-family: 'Paperlogy-7Bold';
     font-size: 28px;
     color: #DB4848;
 }
 
-.photoZone {
+.PictureSize2-photoZone {
     padding: 1px;
     width: 900px;
     text-align: center;
 }
 
-.Photo-countdown {
+.PictureSize2-Photo-countdown {
     font-family: 'Paperlogy-7Bold';
     font-size: 43px;
     color: #fff;
 }
 
-.Photo-finishText {
+.PictureSize2-Photo-finishText {
     visibility: hidden; /* 화면에서는 안 보이지만 공간 유지 */
 }
 
-.photo {
+.PictureSize2-photo {
     width: 502px;
     height: 665px;
     object-fit: cover;
 }
 
-.resultZone {
+.PictureSize2-resultZone {
     position: relative;
 }
 
-/* 개별 사진 위치 조정 */
-.takenPhoto {
+
+/* 첫 번째 사진 (왼쪽 위) */
+.PictureSize2-photo1 {
     width: 245px;
     height: 337px;
     object-fit: cover;
-    position: absolute;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* 첫 번째 사진 (왼쪽 위) */
-.photo1 {
     top: -640px;
     right: 402px;
 }
 
 /* 두 번째 사진 (오른쪽 위) */
-.photo2 {
+.PictureSize2-photo2 {
+    width: 245px;
+    height: 337px;
+    object-fit: cover;
     top: -640px;
     right: 150px;
 }
 
 /* 세 번째 사진 (왼쪽 아래) */
-.photo3 {
+.PictureSize2-photo3 {
+    width: 245px;
+    height: 337px;
+    object-fit: cover;
     bottom:-80px;
     right: 402px;
 }
 
 /* 네 번째 사진 (오른쪽 아래) */
-.photo4 {
+.PictureSize2-photo4 {
+    width: 245px;
+    height: 337px;
+    object-fit: cover;
     bottom:-80px;
     right: 150px;
 }
 
-.frame {
+.PictureSize2-frame {
     width: 540px;
     height: 805px;
     top: -685px;

@@ -45,53 +45,53 @@ const PictureSize1 = () => {
     };
 
     return (
-        <div className="container">
-            {showModal && <div className="dark-overlay"></div>}
+        <div className="PictureSize1-container">
+            {showModal && <div className="PictureSize1-dark-overlay"></div>}
             {showModal && (
-                <div className="modal">
-                    <div className="modal-content">
+                <div className="PictureSize1-modal">
+                    <div className="PictureSize1-modal-content">
                         <img 
-                            className="picIcon"
+                            className="PictureSize1-picIcon"
                             src="/images/pictureIcon.png"
                             alt="사진 아이콘"
                         />
-                        <h2 className="text1">잠시 후 촬영이 시작됩니다</h2>
-                        <p className="text2">
-                            촬영 횟수는 <span className="text3">총 4회</span> 입니다.
+                        <h2 className="PictureSize1-text1">잠시 후 촬영이 시작됩니다</h2>
+                        <p className="PictureSize1-text2">
+                            촬영 횟수는 <span className="PictureSize1-text3">총 4회</span> 입니다.
                         </p>
                     </div>
                 </div>
             )}
 
-            <div className="Picture-background">
-                <div className="photoZone">
+            <div className="PictureSize1-Picture-background">
+                <div className="PictureSize1-photoZone">
                     {photoCount < 4 ? (
-                        <p className="Photo-countdown">{countdown}</p>
+                        <p className="PictureSize1-Photo-countdown">{countdown}</p>
                     ) : (
-                        <p className="Photo-finishText">촬영 완료!</p>
+                        <p className="PictureSize1-Photo-finishText">촬영 완료!</p>
                     )}
 
                     <Webcam
                         audio={false}
                         ref={webcamRef}
                         screenshotFormat="image/jpeg"
-                        className="photo"
+                        className="PictureSize1-photo"
                         mirrored={true}
                     />
                 </div>
                 
-                <div className="resultZone">
+                <div className="PictureSize1-resultZone">
                     <img
                         src={images[frame] ? images[frame][0] : ""}
-                        alt={`${frame} 가로 프레임`}
-                        className="frame"
+                        alt={`${frame} 얇은 프레임`}
+                        className="PictureSize1-frame"
                     />
                     {capturedImages.map((image, index) => (
                         <img 
                             key={index} 
                             src={image} 
                             alt={`Captured ${index + 1}`} 
-                            className={`takenPhoto photo${index + 1}`}
+                            className={`PictureSize1-photo${index + 1}`}
                         />
                     ))}
                 </div>
