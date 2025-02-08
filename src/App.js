@@ -5,9 +5,11 @@ import SelectFrame from "./selectframe/SelectFrame";
 import SelectSize from "./selectsize/SelectSize";
 import SelectFrameTeacher from "./selectframe_teacher/SelectFrameTeacher";
 import SelectFrameSummer from "./selectframe_summer/SelectFrameSummer";
-import Gallery from "./Gallery/Gallery";
-import Finish from "./Finish/Finish";
+import PictureSize1 from "./picturesize1/PictureSize1";
+import PictureSize2 from "./picturesize2/PictureSize2";
 import Email from "./Email/Email";
+import Finish from "./Finish/Finish";
+import Gallery from "./Gallery/Gallery";
 
 function App() {
 
@@ -21,9 +23,11 @@ function App() {
           <Route path="/selectSize/:design" element={<SelectSize />} />
           <Route path="/Teacher" element={<SelectFrameTeacher /> } />
           <Route path="/Summer" element={<SelectFrameSummer /> } />
-          <Route path="/Gallery" element={<Gallery /> } />
-          <Route path="/Finish" element={<Finish /> } />
+          <Route path="/PictureSize1" element={<PictureSize1 /> } />
+          <Route path="/PictureSize2" element={<PictureSize2 /> } />
           <Route path="/Email" element={<Email /> } />
+          <Route path="/Finish" element={<Finish /> } />
+          <Route path="/Gallery" element={<Gallery /> } />
 
       </Routes>
     </Router>
