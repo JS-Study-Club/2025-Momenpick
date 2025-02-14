@@ -9,6 +9,16 @@
 .PictureSize2-Picture-background img {
     position: absolute;
 }
+/* 배경을 어둡게 하는 오버레이 */
+.PictureSize2-dark-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);  /* 어두운 반투명 배경 */
+    z-index: 100;  /* 모달보다 아래 */
+}
 
 /* 모달 스타일 */
 .PictureSize2-modal {
@@ -50,9 +60,10 @@
 }
 
 .PictureSize2-photoZone {
-    padding: 1px;
     width: 900px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .PictureSize2-Photo-countdown {
@@ -61,8 +72,17 @@
     color: #fff;
 }
 
-.PictureSize2-Photo-finishText {
-    visibility: hidden; /* 화면에서는 안 보이지만 공간 유지 */
+.PictureSize2-shutterBtn {
+    width: 60px;
+    height: 60px;
+    margin-top: 813px;
+}
+
+.PictureSize2-shutterdescription {
+    font-family: 'Paperlogy-6SemiBold';
+    font-size: 22px;
+    color: #A1A1A1;
+    margin-top: 80px;
 }
 
 .PictureSize2-photo {
@@ -71,17 +91,12 @@
     object-fit: cover;
 }
 
-.PictureSize2-resultZone {
-    position: relative;
-}
-
-
 /* 첫 번째 사진 (왼쪽 위) */
 .PictureSize2-photo1 {
     width: 245px;
     height: 337px;
     object-fit: cover;
-    top: -640px;
+    top: 102px;
     right: 402px;
 }
 
@@ -90,8 +105,8 @@
     width: 245px;
     height: 337px;
     object-fit: cover;
-    top: -640px;
-    right: 150px;
+    top: 102px;
+    right: 152px;
 }
 
 /* 세 번째 사진 (왼쪽 아래) */
@@ -99,7 +114,7 @@
     width: 245px;
     height: 337px;
     object-fit: cover;
-    bottom:-80px;
+    top: 485px;
     right: 402px;
 }
 
@@ -108,14 +123,14 @@
     width: 245px;
     height: 337px;
     object-fit: cover;
-    bottom:-80px;
-    right: 150px;
+    top: 485px;
+    right: 152px;
 }
 
 .PictureSize2-frame {
     width: 540px;
     height: 805px;
-    top: -685px;
+    top: 60px;
     right: 130px;
     z-index: 10;  /* 프레임을 더 앞으로 배치 */
 
