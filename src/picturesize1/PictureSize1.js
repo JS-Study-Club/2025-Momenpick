@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import Webcam from "react-webcam";
 import "./PictureSize1.css";
@@ -19,6 +19,14 @@ const PictureSize1 = () => {
         summer3: ["/images/summer3-1.png"],
     };
 
+    const takePhoto = useCallback(() => {
+        if (photoCount < 4) {
+            capturePhoto();
+            setCountdown(10);
+            setPhotoCount(prevCount => prevCount + 1);
+        }
+    }, [photoCount]);
+
     useEffect(() => {
         if (showModal) {
             const modalTimer = setTimeout(() => setShowModal(false), 3000);
@@ -29,11 +37,9 @@ const PictureSize1 = () => {
             const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
             return () => clearTimeout(timer);
         } else if (countdown === 0 && photoCount < 4) {
-            capturePhoto();
-            setCountdown(10);
-            setPhotoCount(prevCount => prevCount + 1);
+            takePhoto();
         }
-    }, [countdown, photoCount, showModal]);
+    }, [countdown, photoCount, showModal, takePhoto]);
 
     const capturePhoto = () => {
         if (webcamRef.current) {
@@ -64,13 +70,13 @@ const PictureSize1 = () => {
             )}
 
             <div className="PictureSize1-Picture-background">
-                <div className="PictureSize1-photoZone">
-                    {photoCount < 4 ? (
-                        <p className="PictureSize1-Photo-countdown">{countdown}</p>
-                    ) : (
-                        <p className="PictureSize1-Photo-finishText">촬영 완료!</p>
-                    )}
 
+                <div className="PictureSize1-photoZone">
+                {photoCount < 4 ? (
+                    <p className="PictureSize1-Photo-countdown">{countdown}</p>
+                ) : (
+                    <p className="PictureSize1-Photo-countdown" style={{ visibility: "hidden" }}>0</p>
+                )}
                     <Webcam
                         audio={false}
                         ref={webcamRef}
@@ -78,6 +84,19 @@ const PictureSize1 = () => {
                         className="PictureSize1-photo"
                         mirrored={true}
                     />
+                    <img
+                        className="PictureSize1-shutterBtn"
+                        src="/images/shutterBtn.png"
+                        alt="셔터버튼"
+                        onClick={takePhoto}
+                        disabled={photoCount>=4}
+                        style={{display: photoCount<4 ? "block" : "none"}}
+                    />
+                    <p
+                        className="PictureSize1-shutterdescription"
+                        style={{display: photoCount<4 ? "block" : "none"}}
+                    >클릭하여 촬영하기</p>
+
                 </div>
                 
                 <div className="PictureSize1-resultZone">
