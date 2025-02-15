@@ -15,8 +15,6 @@ const SelectFrame = () => {
                 className="designer"
                 src="/images/designerSelect.png" 
                 alt="Designer"
-                width={507}
-                height={805}
                 onClick={() => goToResult("designer")}
                 style={{ cursor: "pointer" }}
             />
@@ -24,8 +22,6 @@ const SelectFrame = () => {
                 className="developer"
                 src="/images/developerSelect.png" 
                 alt="Developer"
-                width={507}
-                height={805}
                 onClick={() => goToResult("developer")}
                 style={{ cursor: "pointer" }}
             />
@@ -33,8 +29,6 @@ const SelectFrame = () => {
                 className="teacher"
                 src="/images/teacherSelect.png" 
                 alt="Teacher"
-                width={499}
-                height={366}
                 onClick={() => navigate("/Teacher")}
                 style={{ cursor: "pointer" }}
             />
@@ -42,8 +36,6 @@ const SelectFrame = () => {
                 className="summer"
                 src="/images/summerSelect.png" 
                 alt="Summer"
-                width={499}
-                height={409}
                 onClick={() => navigate("/Summer")}
                 style={{ cursor: "pointer" }}
             />

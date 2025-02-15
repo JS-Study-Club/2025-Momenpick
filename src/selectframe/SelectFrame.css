@@ -11,21 +11,29 @@
 }
 
 .designer {
+    width: 507px;
+    height: 805px;
     left: 30px;
     top: 30px;
 }
 
 .developer {
+    width: 507px;
+    height: 805px;
     left: 525px; /* designer의 width만큼 오른쪽으로 배치 */
     top: 30px;
 }
 
 .teacher {
+    width: 499px;
+    height: 366px;
     left: 1010px;
     top: 40px;
 }
 
 .summer {
+    width: 499px;
+    height: 409;
     left: 1010px; /* teacher 이미지의 너비만큼 오른쪽으로 배치 */
     top: 415px;
 }
