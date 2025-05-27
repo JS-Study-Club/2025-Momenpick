@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import Webcam from "react-webcam";
 import "./PictureSize2.css";
@@ -10,6 +11,7 @@ const PictureSize2 = () => {
     const [photoCount, setPhotoCount] = useState(0);
     const [capturedImages, setCapturedImages] = useState([]);
     const { frame } = useParams(); // URL에서 frame 값 가져오기
+    const navigate = useNavigate(); 
 
     const images = {
         designer: ["/images/designer2.png"],
@@ -52,6 +54,15 @@ const PictureSize2 = () => {
             }
         }
     };
+
+    useEffect(() => {
+        if (photoCount === 4) {
+            const moveTimer = setTimeout(() => {
+                navigate('/email');
+            }, 1000);
+            return () => clearTimeout(moveTimer);
+        }
+    }, [photoCount, navigate]);
 
     return (
         <div className="PictureSize2-container">
