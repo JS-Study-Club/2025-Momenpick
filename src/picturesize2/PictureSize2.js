@@ -17,6 +17,9 @@ const PictureSize2 = () => {
         summer1: ["/images/summer1-2.png"],
         summer2: ["/images/summer2-2.png"],
         summer3: ["/images/summer3-2.png"],
+        teacher1: ["/images/white2.png"],
+        teacher2: ["/images/ham2.png"],
+        teacher3: ["/images/lee2.png"],
     };
 
     const takePhoto = useCallback(() => {

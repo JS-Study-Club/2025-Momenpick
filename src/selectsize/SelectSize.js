@@ -15,6 +15,9 @@ function SelectSize() {
         summer1: ["/images/ex_summer1-1.png", "/images/ex_summer1-2.png"],
         summer2: ["/images/ex_summer2-1.png", "/images/ex_summer2-2.png"],
         summer3: ["/images/ex_summer3-1.png", "/images/ex_summer3-2.png"],
+        teacher1: ["/images/ex_white1.png", "/images/ex_white2.png"],
+        teacher2: ["/images/ex_ham1.png", "/images/ex_ham2.png"],
+        teacher3: ["/images/ex_lee1.png", "/images/ex_lee2.png"],
     };
 
     useEffect(() => {
@@ -39,7 +42,9 @@ function SelectSize() {
     const handleBackClick = () => {
         if (design.startsWith("summer")) {
             navigate("/Summer");
-        } else {
+        } else if(design.startsWith("teacher")) {
+            navigate("/Teacher");
+        }else {
             navigate("/SelectFrame");
         }
     };
