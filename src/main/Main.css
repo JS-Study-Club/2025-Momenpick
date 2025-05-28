@@ -11,8 +11,8 @@
 }
   
 .galleryBtn {
-  width: 469px;
-  height: 452px;
-  top: 466px;
-  right: 50px;;
+  position: fixed;
+  top: 62vh;         /* 화면 높이의 10% 아래 */
+  left: 70vw;         /* 화면 너비의 5% 오른쪽 */
+  
 }
