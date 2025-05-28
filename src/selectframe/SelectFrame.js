@@ -11,34 +11,44 @@ const SelectFrame = () => {
 
     return(
         <div className="selectFrame-background">
-            <img
-                className="designer"
-                src="/images/designerSelect.png" 
-                alt="Designer"
-                onClick={() => goToResult("designer")}
-                style={{ cursor: "pointer" }}
-            />
-            <img
-                className="developer"
-                src="/images/developerSelect.png" 
-                alt="Developer"
-                onClick={() => goToResult("developer")}
-                style={{ cursor: "pointer" }}
-            />
-            <img
-                className="teacher"
-                src="/images/teacherSelect.png" 
-                alt="Teacher"
-                onClick={() => navigate("/Teacher")}
-                style={{ cursor: "pointer" }}
-            />
-            <img
-                className="summer"
-                src="/images/summerSelect.png" 
-                alt="Summer"
-                onClick={() => navigate("/Summer")}
-                style={{ cursor: "pointer" }}
-            />
+            <div className="main-row">
+                <div className="column">
+                    <img
+                        className="designer"
+                        src="/images/designerSelect.png" 
+                        alt="Designer"
+                        onClick={() => goToResult("designer")}
+                        style={{ cursor: "pointer" }}
+                    />
+                </div>
+                <div className="column">
+                    <img
+                        className="developer"
+                        src="/images/developerSelect.png" 
+                        alt="Developer"
+                        onClick={() => goToResult("developer")}
+                        style={{ cursor: "pointer" }}
+                    />
+                </div>
+                <div className="right-col">
+                    <img
+                        className="teacher"
+                        src="/images/teacherSelect.png" 
+                        alt="Teacher"
+                        onClick={() => navigate("/Teacher")}
+                        style={{ cursor: "pointer" }}
+                    />
+                    <img
+                        className="summer"
+                        src="/images/summerSelect.png" 
+                        alt="Summer"
+                        onClick={() => navigate("/Summer")}
+                        style={{ cursor: "pointer" }}
+                    />
+                </div>
+            </div>
+            
+            
         </div>
     );
 };
