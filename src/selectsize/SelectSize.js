@@ -51,7 +51,7 @@ function SelectSize() {
 
     return (
         <div className="selectSize-background">
-            <div className="Select-header">
+            <div className="select-header">
                 <img
                     src="/images/backBtn.png"
                     alt="Back"

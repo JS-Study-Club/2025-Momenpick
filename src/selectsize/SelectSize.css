@@ -10,11 +10,6 @@
     position: absolute;
 }
 
-.select-header{
-    display: flex;
-    align-items: center;
-}
-
 .backBtn{
     width: 122px;
     height: auto;
@@ -24,7 +19,6 @@
     top: 100px;
     position: relative;
     z-index: 10; /* 다른 요소에 가려지지 않도록 설정 */
-
 }
 
 #title{

@@ -10,8 +10,8 @@ const SelectFrameSummer = () => {
 };
 
   return (
-    <div className="selectFrame-background">
-      <div className="Select-header">
+    <div className="selectFrameSummer-background">
+      <div className="select-header">
         <img
             src="images/backBtn.png"
             alt="Back"
@@ -19,33 +19,30 @@ const SelectFrameSummer = () => {
             onClick={() => navigate("/SelectFrame")}
           />
       </div>
-      <img
-        className="summer1"
-        src="/images/summer1.png" 
-        alt="여름1"
-        width={432}
-        height={664}
-        onClick={() => goToResult("summer1")}
-        style={{ cursor: "pointer" }}
-      />
-      <img
-          className="summer2"
-          src="/images/summer2.png" 
-          alt="여름2"
-          width={432}
-          height={664}
-          onClick={() => goToResult("summer2")}
+      <div className="select-row">
+        <img
+          className="summer1"
+          src="/images/summer1.png" 
+          alt="여름1"
+          onClick={() => goToResult("summer1")}
           style={{ cursor: "pointer" }}
-      />
-      <img
-          className="summer3"
-          src="/images/summer3.png" 
-          alt="여름3"
-          width={432}
-          height={664}
-          onClick={() => goToResult("summer3")}
-          style={{ cursor: "pointer" }}
-      />
+        />
+        <img
+            className="summer2"
+            src="/images/summer2.png" 
+            alt="여름2"
+            onClick={() => goToResult("summer2")}
+            style={{ cursor: "pointer" }}
+        />
+        <img
+            className="summer3"
+            src="/images/summer3.png" 
+            alt="여름3"
+            onClick={() => goToResult("summer3")}
+            style={{ cursor: "pointer" }}
+        />
+      </div>
+      
     </div>
   );
 };

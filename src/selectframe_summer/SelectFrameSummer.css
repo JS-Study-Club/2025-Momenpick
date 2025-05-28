@@ -1,12 +1,20 @@
-.summer1 {
-    left: 120px;
-    top: 150px;
+.selectFrameSummer-background {
+    background-image: url('/public/images/kindChoiceBg.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 수직 가운데 정렬 */
+    align-items: center;     /* 수평 가운데 정렬 */
+    position: relative; /* 헤더 위치 조정을 위해 필요 */
 }
-.summer2 {
-    left: 550px;
-    top: 150px;
-}
-.summer3 {
-    left: 980px;
-    top: 150px;
+
+.select-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
 }
