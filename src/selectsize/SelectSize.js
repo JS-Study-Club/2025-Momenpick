@@ -27,7 +27,7 @@ function SelectSize() {
 
         const timeout = setTimeout(() => {
             navigate("/");
-        }, 30000);
+        }, 3000000);        // 잠시 바꿔놓음
 
         return () => {
             clearInterval(timer);
@@ -52,30 +52,29 @@ function SelectSize() {
     return (
         <div className="selectSize-background">
             <div className="select-header">
-                <img
-                    src="/images/backBtn.png"
-                    alt="Back"
-                    className="backBtn"
+                <button
                     onClick={handleBackClick}
-                />
+                    className="backBtn"
+                > &lt; Back
+                </button>
                 <div id="title">프레임 크기를 선택해주세요.</div>
                 <div className="countdown-timer">{countdown}</div>
             </div>
-
-            <img
-                alt="세로형"
-                className="size1"
-                src={images[design] ? images[design][0] : ""}
-                style={{ cursor: "pointer" }}
-                onClick={() => handleImageClick(1)}
-            />
-            <img
-                alt="가로형"
-                className="size2"
-                src={images[design] ? images[design][1] : ""}
-                style={{ cursor: "pointer" }}
-                onClick={() => handleImageClick(2)}
-            />
+            <div className="select-body">
+                <img
+                    alt="세로형"
+                    className="size1"
+                    src={images[design] ? images[design][0] : ""}
+                    onClick={() => handleImageClick(1)}
+                />
+                <img
+                    alt="가로형"
+                    className="size2"
+                    src={images[design] ? images[design][1] : ""}
+                    onClick={() => handleImageClick(2)}
+                />
+            </div>
+            
         </div>
     );
 }

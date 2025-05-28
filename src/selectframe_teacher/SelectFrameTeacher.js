@@ -12,12 +12,11 @@ const SelectFrameTeacher = () => {
   return (
     <div className="selectFrameTeacher-background">
       <div className="select-header">
-        <img
-          src="images/backBtn.png"
-          alt="Back"
-          className="backBtn"
+        <button
           onClick={() => navigate("/SelectFrame")}
-        />
+          className="backBtn"
+        > &lt; Back
+        </button>
       </div>
       <div className="select-row">
         <img
