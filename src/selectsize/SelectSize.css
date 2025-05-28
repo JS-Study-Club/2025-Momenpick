@@ -4,51 +4,48 @@
     background-position: center;
     width: 100%;
     height: 100vh;
-}
-
-.selectSize-background img {
-    position: absolute;
-}
-
-.backBtn{
-    width: 122px;
-    height: auto;
-    cursor: pointer;
-    margin-right: 480px;
-    margin-left: 110px;
-    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     position: relative;
-    z-index: 10; /* 다른 요소에 가려지지 않도록 설정 */
 }
 
-#title{
+.select-header {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 99.2%;
+}
+  
+.backBtn {
+    font-family: "NotoSerifKR-Bold";
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 34px;
+    position: absolute;
+    left: 50px;
+}
+
+#title {
     font-family: "Paperlogy-7Bold";
     font-size: 45px;
     color: white;
-    text-align: center;
-    position: relative;
-    top: 100px;
-}
-
-.size1{
-    width: 414px;
-    height: 614px;
-    top: 200px;
-    left: 230px;
-}
-.size2{
-    width: 598px;
-    height: 614px;
-    top: 200px;
-    left: 700px;
 }
 
 .countdown-timer {
-    position: absolute;
-    top: 100px;
-    right: 90px;
     font-size: 45px;
     font-family: "Paperlogy-6SemiBold";
     color: #FFE852;
-  }
-  
+    position: absolute;
+    right: 100px;
+}
+
+.select-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
