@@ -2,7 +2,6 @@
     background-image: url('/public/images/kindChoiceBg.png');
     background-size: cover;
     background-position: center;
-    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -11,44 +10,17 @@
 
 .main-row {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 2rem
+}
+
+.right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .column {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.designer, .developer {
-    width: 511px;
-    height: 812px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.right-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.teacher, .summer {
-    width: 504px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.teacher {
-    height: 370px;
-}
-
-.summer {
-    height: 413px;
+    gap: 2rem;
 }
