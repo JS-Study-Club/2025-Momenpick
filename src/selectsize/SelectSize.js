@@ -27,7 +27,7 @@ function SelectSize() {
 
         const timeout = setTimeout(() => {
             navigate("/");
-        }, 3000000);        // 잠시 바꿔놓음
+        }, 30000);        // 30초 이후에는 /화면으로 이동
 
         return () => {
             clearInterval(timer);
