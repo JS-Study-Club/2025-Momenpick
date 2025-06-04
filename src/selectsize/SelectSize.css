@@ -16,6 +16,7 @@
     display: flex;
     justify-content: center;
     width: 99.2%;
+    margin-bottom: 100px;
 }
   
 .backBtn {
@@ -44,6 +45,7 @@
 }
 
 .select-body {
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
