@@ -100,19 +100,6 @@ const PictureSize1 = () => {
                         className="PictureSize1-photo"
                         mirrored={true}
                     />
-                    <img
-                        className="PictureSize1-shutterBtn"
-                        src="/images/shutterBtn.png"
-                        alt="셔터버튼"
-                        onClick={takePhoto}
-                        disabled={photoCount>=4}
-                        style={{display: photoCount<4 ? "block" : "none"}}
-                    />
-                    <p
-                        className="PictureSize1-shutterdescription"
-                        style={{display: photoCount<4 ? "block" : "none"}}
-                    >클릭하여 촬영하기</p>
-
                 </div>
                 
                 <div className="PictureSize1-resultZone">

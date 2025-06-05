@@ -39,7 +39,7 @@ const PictureSize2 = () => {
         }
 
         if (countdown > 0 && photoCount < 4) {
-            const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
+            const timer = setTimeout(() => setCountdown(countdown - 1), 10000); //임시로 바꿔놓음
             return () => clearTimeout(timer);
         } else if (countdown === 0 && photoCount < 4) {
             takePhoto();
@@ -98,18 +98,6 @@ const PictureSize2 = () => {
                         className="PictureSize2-photo"
                         mirrored={true}
                     />
-                    <img
-                        className="PictureSize2-shutterBtn"
-                        src="/images/shutterBtn.png"
-                        alt="셔터버튼"
-                        onClick={takePhoto}
-                        disabled={photoCount>=4}
-                        style={{display: photoCount<4 ? "block" : "none"}}
-                    />
-                    <p
-                        className="PictureSize2-shutterdescription"
-                        style={{display: photoCount<4 ? "block" : "none"}}
-                    >클릭하여 촬영하기</p>
                 </div>
                 
                 <div className="PictureSize2-resultZone">

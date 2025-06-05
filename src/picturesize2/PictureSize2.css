@@ -60,7 +60,7 @@
 }
 
 .PictureSize2-photoZone {
-    width: 900px;
+    width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,66 +72,53 @@
     color: #fff;
 }
 
-.PictureSize2-shutterBtn {
-    width: 60px;
-    height: 60px;
-    margin-top: 813px;
-}
-
-.PictureSize2-shutterdescription {
-    font-family: 'Paperlogy-6SemiBold';
-    font-size: 22px;
-    color: #A1A1A1;
-    margin-top: 80px;
-}
-
 .PictureSize2-photo {
-    width: 502px;
-    height: 665px;
+    width: 596px;
+    height: 789px;
     object-fit: cover;
 }
 
 /* 첫 번째 사진 (왼쪽 위) */
 .PictureSize2-photo1 {
-    width: 245px;
-    height: 337px;
+    width: 269px;
+    height: 369px;
     object-fit: cover;
-    top: 102px;
-    right: 402px;
+    top: 145px;
+    right: 508px;
 }
 
 /* 두 번째 사진 (오른쪽 위) */
 .PictureSize2-photo2 {
-    width: 245px;
-    height: 337px;
+    width: 269px;
+    height: 369px;
     object-fit: cover;
-    top: 102px;
-    right: 152px;
+    top: 145px;
+    right: 232px;
 }
 
 /* 세 번째 사진 (왼쪽 아래) */
 .PictureSize2-photo3 {
-    width: 245px;
-    height: 337px;
+    width: 269px;
+    height: 369px;
     object-fit: cover;
-    top: 485px;
-    right: 402px;
+    top: 565px;
+    right: 508px;
 }
 
 /* 네 번째 사진 (오른쪽 아래) */
 .PictureSize2-photo4 {
-    width: 245px;
-    height: 337px;
+    width: 269px;
+    height: 369px;
     object-fit: cover;
-    top: 485px;
-    right: 152px;
+    top: 565px;
+    right: 232px;
 }
 
 .PictureSize2-frame {
-    width: 540px;
-    height: 805px;
-    top: 60px;
-    right: 130px;
+    width: 590px;
+    height: 880px;
+    top: 100px;
+    right: 210px;
     z-index: 10;  /* 프레임을 더 앞으로 배치 */
-
+    
 }
