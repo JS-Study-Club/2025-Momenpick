@@ -39,7 +39,7 @@ const PictureSize2 = () => {
         }
 
         if (countdown > 0 && photoCount < 4) {
-            const timer = setTimeout(() => setCountdown(countdown - 1), 10000); //임시로 바꿔놓음
+            const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
             return () => clearTimeout(timer);
         } else if (countdown === 0 && photoCount < 4) {
             takePhoto();
