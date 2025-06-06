@@ -13,15 +13,38 @@ const PictureSize2 = () => {
     const { frame } = useParams(); // URL에서 frame 값 가져오기
     const navigate = useNavigate(); 
 
-    const images = {
-        designer: ["/images/designer2.png"],
-        developer: ["/images/developer2.png"],
-        summer1: ["/images/summer1-2.png"],
-        summer2: ["/images/summer2-2.png"],
-        summer3: ["/images/summer3-2.png"],
-        teacher1: ["/images/white2.png"],
-        teacher2: ["/images/ham2.png"],
-        teacher3: ["/images/lee2.png"],
+    // 프레임 이미지 (사진 테두리 역할)
+    const frameImages = {
+        designer: "/images/designer2.png",
+        developer: "/images/developer2.png",
+        summer1: "/images/summer1-2.png",
+        summer2: "/images/summer2-2.png",
+        summer3: "/images/summer3-2.png",
+        teacher1: "/images/white2.png",
+        teacher2: "/images/ham2.png",
+        teacher3: "/images/lee2.png",
+    };
+
+    // 선생님 포즈 이미지 (웹캠 위에서 보이는 사진)
+    const poseImages = {
+        teacher1: [
+            "/images/white2-1.png",
+            "/images/white2-2.png",
+            "/images/white2-3.png",
+            "/images/white2-4.png",
+        ],
+        teacher2: [
+            "/images/ham2-1.png",
+            "/images/ham2-2.png",
+            "/images/ham2-3.png",
+            "/images/ham2-4.png",
+        ],
+        teacher3: [
+            "/images/lee2-1.png",
+            "/images/lee2-2.png",
+            "/images/lee2-3.png",
+            "/images/lee2-4.png",
+        ],
     };
 
     const takePhoto = useCallback(() => {
@@ -98,12 +121,19 @@ const PictureSize2 = () => {
                         className="PictureSize2-photo"
                         mirrored={true}
                     />
+                    {frame.startsWith("teacher") && photoCount < 4 && (
+                        <img
+                            src={poseImages[frame][photoCount]}
+                            alt={`${frame} 포즈 ${photoCount + 1}`}
+                            className="PictureSize2-teacherPose"
+                        />
+                    )}
                 </div>
                 
                 <div className="PictureSize2-resultZone">
                     <img
-                        src={images[frame] ? images[frame][0] : ""}
-                        alt={`${frame} 두꺼운 프레임`}
+                        src={frameImages[frame] || ""}
+                        alt={`${frame} 프레임`}
                         className="PictureSize2-frame"
                     />
                     {capturedImages.map((image, index) => (

@@ -73,9 +73,20 @@
 }
 
 .PictureSize2-photo {
-    width: 596px;
-    height: 789px;
+    width: 564px;
+    height: 841px;
     object-fit: cover;
+    z-index: 1;
+}
+
+.PictureSize2-teacherPose {
+    position: absolute;
+    top: 140px;
+    width: 564px;
+    height: 841px;
+    object-fit: contain;
+    z-index: 2;
+    pointer-events: none;
 }
 
 /* 첫 번째 사진 (왼쪽 위) */
