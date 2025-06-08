@@ -323,13 +323,13 @@ return (
             mirrored
         />
         {frame.startsWith("teacher") && photoCount < 4 && (
-            <img
-            src={poseImages[frame][photoCount]}
-            alt={`${frame} 포즈 ${photoCount + 1}`}
-            className="PictureSize1-teacherPose"
-            crossOrigin="anonymous"
-            />
-        )}
+  <img
+    src={poseImages[frame][photoCount]}
+    alt={`${frame} 포즈 ${photoCount + 1}`}
+    className={`PictureSize1-teacherPose ${frame === "teacher1" ? "teacher1-special" : ""}`}
+    crossOrigin="anonymous"
+  />
+)}
         </div>
 
         <div className="PictureSize1-resultZone" ref={resultZoneRef}>

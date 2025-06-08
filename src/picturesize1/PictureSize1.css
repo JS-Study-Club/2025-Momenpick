@@ -95,9 +95,14 @@
     position: relative;
 }
 
+.teacher1-special {
+    left: 53% !important;
+    transform: translateX(-50%);
+}
+
 .PictureSize1-teacherPose {
     position: absolute;
-    top: 50px;
+    top: 47px;
     left: 47%;
     transform: translateX(-50%);
     object-fit: contain;
