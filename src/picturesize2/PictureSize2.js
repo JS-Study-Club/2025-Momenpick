@@ -132,11 +132,15 @@ useEffect(() => {
       const canvasHeight = 879;
       
       // 캔버스 생성
+      const scale = 2;
       const canvas = document.createElement('canvas');
-      canvas.width = canvasWidth;
-      canvas.height = canvasHeight;
+      canvas.width = canvasWidth * scale;
+      canvas.height = canvasHeight * scale;
       const ctx = canvas.getContext('2d');
-      
+
+      // 모든 그리기 작업 전에 스케일 조정
+      ctx.scale(scale, scale);
+        
       // 프레임 이미지 미리 로드 (그리기는 나중에)
       const frameImg = new Image();
       frameImg.crossOrigin = 'anonymous';
