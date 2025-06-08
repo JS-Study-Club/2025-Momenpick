@@ -282,7 +282,12 @@ useEffect(() => {
             console.error('저장 중 오류 : ', error);
         }
         setTimeout(() => {
-            navigate('/Email');
+            const imageUrl = URL.createObjectURL(resultBlob);
+            navigate('/Email', { state: {
+                                    previewImageUrl: imageUrl,
+                                    frameSize: 'size2'
+                                }
+            });
         }, 1000);
         } else {
         console.error('Failed to capture result zone');
