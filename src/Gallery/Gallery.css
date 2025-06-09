@@ -2,33 +2,48 @@
   background-image: url('/public/images/galleryBg.png');
   display: flex;
   flex-direction: column;
-  gap: 152px;
-  padding-top: 400px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.select-header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  display: flex;
   align-items: center;
-  padding-bottom: 150px;
+  justify-content: center;
 }
 
 .gallery-content {
+  margin-top: 380px;
+  padding-left: 258px;
   display: flex;
-  gap: 95px;
+  flex-direction: row;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 84px;
+  padding-top: 20px;
+  background-image: url('/public/images/galleryBg.png'); /* 스크롤에도 배경 유지 */
+  background-repeat: repeat;
 }
 
 .gallery-item-wrapper {
-  position: relative;
   display: inline-block;
+  position: relative;
+}
+
+.gallery-image {
+  height: 570px;
 }
 
 .sticker {
   position: absolute;
-  top: -15px;
   left: 50%;
+  top: -15px;
   transform: translateX(-50%);
   width: 74px;
   height: 27px;
   background-color: rgba(255, 255, 255, 0.5);
-  z-index: 2;
-}
-
-.gallery-image {
-  height: 643px;
+  pointer-events: none;
 }
