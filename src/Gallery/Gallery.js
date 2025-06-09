@@ -35,15 +35,19 @@ const Gallery = () => {
 
     fetchImages();
   }, []);
+
+  const handleBackClick = () => {
+    navigate("/SelectFrame");
+  };
+
     return (
       <div className="gallery-background">
-        <div className="gallery-header">
-          <img
-            src="images/backBtn.png"
-            alt="Back"
-            className="backBtn"
-            onClick={() => navigate("/")}
-          />
+        <div className="select-header">
+          <button
+                    onClick={handleBackClick}
+                    className="backBtn"
+                > &lt; Back
+                </button>
           <img
             src="images/galleryLogo.png"
             alt="GalleryLogo"
