@@ -37,17 +37,17 @@ const Gallery = () => {
   }, []);
 
   const handleBackClick = () => {
-    navigate("/SelectFrame");
+    navigate("/");
   };
 
     return (
       <div className="gallery-background">
         <div className="select-header">
           <button
-                    onClick={handleBackClick}
-                    className="backBtn"
-                > &lt; Back
-                </button>
+              onClick={handleBackClick}
+              className="backBtn"
+          > &lt; Back
+          </button>
           <img
             src="images/galleryLogo.png"
             alt="GalleryLogo"
