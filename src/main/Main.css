@@ -16,3 +16,9 @@
   left: 65vw;         /* 화면 너비의 5% 오른쪽 */
   
 }
+/* 스크롤바 제거 */
+body, html {
+  overflow: hidden;
+  margin: 0;   /* 혹시 margin으로 인해 스크롤이 생기는 것도 방지 */
+  padding: 0;
+}
