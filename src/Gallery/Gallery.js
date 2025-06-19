@@ -11,7 +11,7 @@ const Gallery = () => {
     const fetchImages = async () => {
       try {
         const storage = getStorage();
-        const listRef = ref(storage, 'images/');
+        const listRef = ref(storage, 'gallery/');
         const res = await listAll(listRef);
 
         const urlPromises = res.items.map(itemRef => getDownloadURL(itemRef));
